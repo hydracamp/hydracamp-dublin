@@ -6,6 +6,8 @@ HydraDemo::Application.routes.draw do
 
   devise_for :users
 
+  resources :books
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
