@@ -10,6 +10,10 @@ gem 'blacklight'
 gem 'hydra-head', '6.0.0'
 gem 'jettywrapper'
 
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
