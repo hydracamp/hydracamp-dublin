@@ -6,6 +6,7 @@
 git clone ...
 cd hydracamp-dublin
 bundle install
+rake db:migrate
 ````
 
 Install hydra-jetty
