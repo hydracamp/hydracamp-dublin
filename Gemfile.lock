@@ -67,7 +67,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    columnize (0.3.6)
     daemons (1.1.9)
+    debugger (1.5.0)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.2.0)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.2.0)
     deprecation (0.0.5)
       activesupport
     devise (2.2.3)
@@ -246,6 +253,7 @@ DEPENDENCIES
   blacklight
   bootstrap-sass
   coffee-rails (~> 3.2.1)
+  debugger (~> 1.5.0)
   devise
   devise-guests (~> 0.3)
   hydra-head (= 6.0.0)

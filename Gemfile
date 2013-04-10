@@ -10,6 +10,10 @@ gem 'blacklight'
 gem 'hydra-head', '6.0.0'
 gem 'jettywrapper'
 
+group :development do
+  gem 'debugger', '~> 1.5.0'
+end
+
 group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
