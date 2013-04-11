@@ -16,20 +16,27 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
-  <% authors = @book.author %>
-  <% if authors.empty? %>
-    <div class="field">
-      <%= f.label :author %><br />
-      <%= f.text_field :author %>
-    </div>
-  <% else %>
-    <% authors.each do |author| %>
+  <div id="author-list">
+    <% authors = @book.author %>
+    <% if authors.empty? %>
       <div class="field">
         <%= f.label :author %><br />
-        <%= text_field_tag "book[author][]", author %>
+        <%= text_field_tag "book[author][]", "" %>
       </div>
-    <% end %> 
-  <% end %>
+    <% else %>
+      <%= f.label :author %><br />
+      <% authors.each do |author| %>
+        <div style="display:block;clear:both;">
+          <span class="field" style="float:left">
+            <%= text_field_tag "book[author][]", author %>
+          </span>
+          <span class="icon-minus-sign remove-author"></span><br />
+        </div>
+      <% end %> 
+    <% end %>
+  </div>
+  <br />
+   <div id="add-author" class="icon-plus-sign"></div>
   <div class="actions">
     <%= f.submit %>
   </div>
