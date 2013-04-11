@@ -7,8 +7,6 @@ describe Datastream::StructureMetadata do
 	end
 	it "should have pages" do
 		@ds.pages.should_not be_empty
-
-		puts @ds.pages.nodeset.xpath('//page').size
 		@ds.pages.nodeset.xpath('//page').size.should == 7
 	end
 end
