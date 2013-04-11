@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+  - 1.9.3
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate
+  - rails generate hydra:jetty
+  - bundle exec rake
