@@ -1,5 +1,10 @@
 # HydraCamp Dublin Application
 
+# Code status
+
+[![Build Status](https://travis-ci.org/hydracamp/hydracamp-dublin.png?branch=master)](https://travis-ci.org/hydracamp/hydracamp-dublin)
+
+
 # Installation
 
 ```text
