@@ -9,6 +9,13 @@ class Datastream::BookMetadata < ActiveFedora::OmDatastream
   def self.xml_template
     Nokogiri::XML.parse("<fields/>")
   end
+
+  def author_name=(values)
+    ng_xml.search(self.author.xpath).each do |n|
+      n.remove
+    end
+    self.author = values
+  end
   
   def to_solr(solr_doc={})
     super

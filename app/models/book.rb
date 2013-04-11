@@ -8,4 +8,11 @@ class Book < ActiveFedora::Base
   delegate :author, to: 'descMetadata'
 
   delegate :page_list, to: 'pageList'
+
+  #Override update_attributes to add call to descMetadata.author_name
+  def update_attributes(params = {})
+    self.descMetadata.author_name=params["author"] unless params["author"].nil?
+    super(params)
+  end
+
 end

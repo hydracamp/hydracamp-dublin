@@ -22,6 +22,17 @@ describe Book do
     subject.datastreams["pageList"].should be_kind_of(Datastream::StructureMetadata)
   end
 
+  describe "update_attributes" do
+    it "should update the Book with appropiate fields" do
+       params = {"title"=>"Test", "author"=>["Test", "Test 2"]}
+
+       subject.update_attributes(params)
+       
+       subject.title.should == "Test"
+       subject.author.should == ["Test", "Test 2"]
+    end
+  end
+
   describe "to_solr" do
     before do
       subject.title = "My Title"
