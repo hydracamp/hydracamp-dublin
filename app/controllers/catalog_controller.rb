@@ -93,6 +93,10 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name('lc_callnum', :stored_searchable, type: :string), :label => 'Call number:'
     config.add_show_field solr_name('isbn', :stored_searchable, type: :string), :label => 'ISBN:'
 
+    # Add creation and modification time of the object, and format them
+    config.add_show_field solr_name('system_create', :stored_sortable, type: :date), :label => 'Creation time:', :helper_method => :date_format_helper
+    config.add_show_field solr_name('system_modified', :stored_sortable, type: :date), :label => 'Modification time:', :helper_method => :date_format_helper
+
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
     #
