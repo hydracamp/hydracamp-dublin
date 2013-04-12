@@ -16,6 +16,7 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
+
   <% authors = @book.author %>
   <% if authors.empty? %>
     <div class="field">
@@ -30,6 +31,7 @@
       </div>
     <% end %> 
   <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
